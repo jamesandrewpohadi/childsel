@@ -1,0 +1,85 @@
+body {
+    background:linear-gradient(90deg, rgb(15, 97, 93), rgb(105,176,172));
+}
+
+.item {
+    display:flex;
+    flex-direction:column;
+    top:64px;
+    position:relative;
+    left:7vw;
+    width:84vw;
+}
+
+.item .wrapper {
+    top:4vw;
+    position:relative;
+    display:inline-block;
+    left:4vw;
+}
+
+.item .wrapper .picture {
+    border:2px solid white;
+    width:30vw;
+    height:21vw;
+    overflow:hidden;
+    border-radius: 5px;
+}
+
+.item .wrapper .description p {
+    color:white;
+    font-size:14px;
+    text-shadow:3px 3px rgb(15, 14, 14, 0.16);
+}
+
+.item .wrapper .description p span {
+    color:white;
+    font-size:30px;
+    text-shadow:3px 3px rgb(15, 14, 14, 0.16);
+}
+
+.item .wrapper .picture img {
+    left:4vw;
+    width:30vw;
+    height:21vw;
+}
+
+.item .wrapper .description {
+    left:10px;
+}
+
+.item .options {
+    display:inline-block;
+    width:84vw;
+}
+
+.item .options .option {
+    top:-4vw;
+    display:block;
+    margin:2vw;
+    width:17vw;
+    height:17vw;
+    background-color:white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgb(94, 90, 90,0.2);
+}
+
+.item .options .option.selected {
+    border: 3px solid rgb(20, 126, 94);
+    border-radius: 5px;
+}
+
+.fa-check {
+    color:transparent;
+}
+
+.fa-check.selected {
+    color:rgb(20, 126, 94);
+}
+
+.action {
+    top:-4vw;
+    position:relative;
+    display:inline-block;
+    margin: 0 auto;
+}

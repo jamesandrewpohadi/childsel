@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.left {
+    position:relative;
+    float: left;
+}
+
+.right {
+    position:relative;
+    float: right;
+}
+
+.circle {
+    border-radius: 50%;
+    overflow: hidden;
+}

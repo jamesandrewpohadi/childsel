@@ -1,0 +1,302 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@media only screen and (orientation:portrait){
+    .container { display:none; }
+    .warning { display:block; }
+}
+
+@media only screen and (orientation:landscape){
+    .container { display:block; }
+    .warning { display:none; }
+}
+
+.warning {
+    width:100vw;
+    height:100vh;
+    background-color: rgb(105, 176, 172);
+    position:absolute;
+}
+
+.warning p {
+    top:40%;
+    position:relative;
+    color:white;
+    font-size:20px;
+    text-align:center;
+}
+
+.container {
+    margin:0;
+}
+
+#title-prompt {
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: none;
+    width: 400px;
+}
+
+.canvas-container,
+canvas {
+    width: 72vw;
+    height: 38.4vw;
+    border: 1px solid #aaa";
+
+}
+
+.item {
+    float: left;
+    width: 225px;
+    margin: 10px 20px 10px 0;
+}
+
+.item img {
+    width: 225px;
+    height: 136px;
+    /*border:solid 1px #ccc;*/
+    border-style: dashed;
+    border-width: 1px;
+    border-color: #ccc;
+}
+
+.item a {
+    margin-top: 10px;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    /*margin-right: 20px;*/
+    font-size: 14px;
+    text-decoration: none;
+    font-family: "Microsoft Yahei";
+    color: #666;
+    -webkit-transition: all 0.4s ease-in-out;
+}
+
+.hide {
+    display:none;
+}
+
+@keyframes jello {
+    11.1% {
+        transform: none
+    }
+    22.2% {
+        transform: skewX(-12.5deg) skewY(-12.5deg)
+    }
+    33.3% {
+        transform: skewX(6.25deg) skewY(6.25deg)
+    }
+    44.4% {
+        transform: skewX(-3.125deg) skewY(-3.125deg)
+    }
+    55.5% {
+        transform: skewX(1.5625deg) skewY(1.5625deg)
+    }
+    66.6% {
+        transform: skewX(-0.78125deg) skewY(-0.78125deg)
+    }
+    77.7% {
+        transform: skewX(0.390625deg) skewY(0.390625deg)
+    }
+    88.8% {
+        transform: skewX(-0.1953125deg) skewY(-0.1953125deg)
+    }
+    100% {
+        transform: none
+    }
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.circle {
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+/*
+.canvas-container {
+    background-image: url('../images/scenes/jungle.png');
+    background-size: 100%;
+}
+*/
+
+#wraper,
+.canvas-container,
+.upper-canvas,
+.lower-canvas {
+    top: -10px;
+    position: absolute;
+}
+
+
+
+.tools {
+    left: 70px;
+    top: calc(100vh - 170px);
+    top: -webkit-calc(100vh - 170px);
+    top: -moz-calc(100vh - 170px);
+    width: 105px;
+    height: 105px;
+    position: fixed;
+}
+
+.tools .button {
+    transition: 0.4s linear 0s;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.tools .circle {
+    z-index: -50;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    margin: -18px;
+    display: block;
+}
+
+.tools .circle.active {
+    display: block;
+}
+
+.tools .palette {
+    width: 100px;
+    height: 100px;
+    margin: -50px;
+    background-color: transparent;
+    border-radius: 50%;
+}
+
+.tools .palette.active {
+    transform: rotate(-120deg);
+    background-color: rgb(255, 255, 255, 0.18);
+}
+
+.palette .wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    margin: -25px;
+}
+
+.tools .paint {
+    position: absolute;
+    top: calc(50% - 15px);
+    left: calc(50% + 15px);
+    width: 50px;
+    height: 50px;
+    margin: -25px;
+    display: none;
+}
+
+.tools .paint.active {
+    display: block;
+}
+
+.tools .touch {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    width: 80px;
+    display: none;
+}
+
+.tools .touch.button {
+    display: block;
+}
+
+.circle img {
+    display: block;
+    width: 100%;
+}
+
+.button img {
+    display: block;
+    width: 100%;
+}
+
+.color1.active {
+    background-color: #3a3379;
+    transform: rotate(180deg) translate(5em) rotate(-180deg);
+}
+
+.color2.active {
+    background-color: #F25E40;
+    transform: rotate(135deg) translate(5em) rotate(-135deg);
+}
+
+.color3.active {
+    background-color: #FD8246;
+    transform: rotate(90deg) translate(5em) rotate(-90deg);
+}
+
+.color4.active {
+    background-color: #FFb886;
+    transform: rotate(45deg) translate(5em) rotate(-45deg);
+}
+
+.undo.active {
+    background-color: rgb(255, 255, 255);
+    transform: translate(5em);
+}
+
+.redo.active {
+    background-color: rgb(255, 255, 255);
+    transform: rotate(315deg) translate(5em) rotate(-315deg);
+}
+
+.ok.active {
+    background-color: rgb(255, 255, 255);
+    transform: rotate(225deg) translate(5em) rotate(-225deg);
+}
+
+.eraser.active {
+    background-color: rgb(255, 255, 255);
+    transform: rotate(270deg) translate(5em) rotate(-270deg);
+}
+
+.jello {
+    animation: jello 4s;
+}
+
+.next {
+    position:fixed;
+    right:0px;
+    top: calc(50vh - 50px);
+    transform: rotate(180deg);
+    display:block;
+}
+
+.next img {
+    width:100px;
+    height:100px;
+}
+
+.back {
+    position:fixed;
+    left:0px;
+    top:calc(50vh - 50px);
+    display:block;
+}
+
+.back img {
+    width:100px;
+    height:100px;
+}

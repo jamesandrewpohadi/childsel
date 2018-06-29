@@ -1,0 +1,44 @@
+body {
+    background-color:rgb(105,176,172);
+}
+
+
+.carousel {
+    top:10vh;
+    height:40vw;
+    width:100vw;
+}
+
+.carousel .carousel-item {
+    border-radius:5px;
+    width:46vw;
+    height:35vw;
+    background-color: white;
+}
+
+.carousel-item .wraper {
+    position:absolute;
+    left:2vw;
+    top:2vw;
+    width:42vw;
+    height:32vw;
+    overflow:hidden;
+
+}
+
+.carousel-item p {
+    font-size:2vw;
+    color:black;
+}
+
+.carousel-item img {
+    border-radius:5px;
+    width:42vw;
+    height:28vw;
+}
+
+.wraper {
+    width:500px;
+    height:100px;
+}
+
